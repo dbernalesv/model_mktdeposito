@@ -11,7 +11,6 @@ import pandas as pd
 import pickle
 import os
 
-
 # Cargar la tabla transformada
 def score_model(filename, filename_score):
     
@@ -35,14 +34,6 @@ def score_model(filename, filename_score):
     
     print(filename_score, 'exportado correctamente en la carpeta scores')
     
-
-# Scoring desde el inicio
-def main():
-    score_model('df_bank_score_proc.csv','final_score.csv')
-    print('Finalizó el Scoring del Modelo')
-
-    
-
 # Scoring desde el inicio
 def main():
     score_model('df_bank_score_proc.csv','final_score.csv')
