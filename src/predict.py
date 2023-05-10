@@ -13,7 +13,7 @@ import os
 
 
 # Cargar la tabla transformada
-def score_model(filename, scores):
+def score_model(filename, filename_score):
     
     # Cargar la tabla transformada
     df_scores = pd.read_csv(os.path.join(".\\data\\processed\\", filename))
@@ -33,7 +33,14 @@ def score_model(filename, scores):
     # Exportamos la solucion
     df_scores.to_csv('.\\data\\scores\\final_score.csv')
     
-    print(scores, 'exportado correctamente en la carpeta scores')
+    print(filename_score, 'exportado correctamente en la carpeta scores')
+    
+
+# Scoring desde el inicio
+def main():
+    score_model('df_bank_score_proc.csv','final_score.csv')
+    print('Finalizó el Scoring del Modelo')
+
     
 
 # Scoring desde el inicio
